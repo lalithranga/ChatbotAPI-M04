@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: ./backend # Ensure this path is correct
+    container_name: vehicle-insurance-api
+    ports:
+      - "5000:5000"
+    networks:
+      - vehicle-insurance-network
+
+  frontend:
+    build:
+      context: ./frontend # Ensure this path is correct
+    container_name: vehicle-insurance-ui
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://vehicle-insurance-api:5000
+    networks:
+      - vehicle-insurance-network
+
+networks:
+  vehicle-insurance-network:
+    driver: bridge
