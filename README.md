@@ -73,9 +73,6 @@ Ensure you have the following installed:
 - Enhance session storage with a database.
 - Deploy the chatbot to a cloud service.
 
-## License
-This project is licensed under the MIT License.
 
----
 Contributions and improvements are welcome!
 
